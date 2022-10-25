@@ -1,0 +1,71 @@
+input,
+select,
+textarea {
+  border: 2px solid;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin: 0.25rem;
+  min-width: 125px;
+  padding: 0.5rem;
+  transition: border-color 0.5s ease-out;
+}
+input:optional {
+  border-color: gray;
+}
+input:required:valid,
+select:required:valid,
+textarea:required:valid {
+  border-color: green;
+}
+input:invalid,
+select:invalid,
+textarea:invalid {
+  border-color: red;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.container {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+button {
+  width: 100%;
+  background-color: green; /* Green */
+  border: none;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+button:disabled {
+  background-color: grey; /* Green */
+}
+
+.htmlOutputContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 250px;
+}
+
+.htmlOutput {
+  margin-top: 1rem;
+  width: 100%;
+}

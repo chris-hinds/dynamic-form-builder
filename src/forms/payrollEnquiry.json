@@ -1,0 +1,55 @@
+{
+  "formMetadata": { "title": "Payroll Enquiry" },
+  "formElements": [
+    {
+      "name": "payslipQuerySubject",
+      "label": "What does your enquiry relate to",
+      "type": "select",
+      "options": [
+        {
+          "label": "Incorrect Pay",
+          "value": "incorrectPay"
+        },
+        {
+          "label": "Missing Expense",
+          "value": "missingExpense"
+        },
+        {
+          "label": "Change of Bank Details",
+          "value": "changeOfBankDetails"
+        },
+        {
+          "label": "Change of Address",
+          "value": "changeOfAddress"
+        },
+        {
+          "label": "Other",
+          "value": "other"
+        }
+      ],
+      "validation": {
+        "required": "Please specify what your query relates to."
+      }
+    },
+    {
+      "name": "payslipDate",
+      "label": "Date of payslip being queried (if applicable)",
+      "type": "date",
+      "validation": {
+        "required": {
+          "field": "payslipQuerySubject",
+          "value": ["incorrectPay", "missingExpense"],
+          "message": "Please select the date of the payslip in question."
+        }
+      }
+    },
+    {
+      "name": "payslipQuery",
+      "label": "Query",
+      "type": "textarea",
+      "validation": {
+        "required": "Please leave a detailed response."
+      }
+    }
+  ]
+}
