@@ -4,7 +4,7 @@ const InputField = ({ element, error, register, watch }) => {
   const validation = buildValidation(element.validation, watch);
   return (
     <input
-      required={validation?.required}
+      required={!!validation?.required}
       type={element.type}
       {...register(element.name, validation)}
       invalid={error}

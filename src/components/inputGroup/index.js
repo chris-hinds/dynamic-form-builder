@@ -19,7 +19,7 @@ const InputComponent = (props) => {
 const InputGroup = ({ element, errors, register, watch }) => {
   return (
     <div className="inputGroup">
-      <label>{element.label}</label>
+      <label htmlFor={element.name}>{element.label}</label>
       {InputComponent({ element, errors, register, watch })}
       <InputError error={errors[element.name]} />
     </div>

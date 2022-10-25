@@ -5,7 +5,8 @@ const TextArea = ({ element, error, register, watch }) => {
 
   return (
     <textarea
-      required={validation?.required}
+      data-testid="query-field"
+      required={!!validation?.required}
       {...register(element.name, validation)}
       invalid={error}
       aria-invalid={error}

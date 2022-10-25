@@ -5,7 +5,8 @@ const SelectField = ({ element, error, register, watch }) => {
 
   return (
     <select
-      required={validation?.required}
+      id={element.name}
+      required={!!validation?.required}
       {...register(element.name, validation)}
       invalid={error}
       aria-invalid={error}
